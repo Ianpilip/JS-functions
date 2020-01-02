@@ -1,4 +1,8 @@
-// Transform an array with only unique values
+/**
+ * Transform an array with only unique values
+ * @param array array
+ * @return array
+ */
 const array_unique = (array) => {
   return array.filter(function(currentItem, currentIndex) {
     return array.indexOf(currentItem) == currentIndex;
@@ -7,17 +11,25 @@ const array_unique = (array) => {
 
 /**************************************************************************************************************/
 
-// Lets suppose that we have an array of objects
-// And we need to get minimum or maximum value of the certain property within all objects
+/**
+ * Lets suppose that we have an array of objects
+ * And we need to get minimum or maximum value of the certain property within all objects
+ * @return mixed
+ */
 const getProps = () => data.map(obj => obj.prop);
 const getMinProp = () => Math.min(...getProps());
 const getMaxprop = () => Math.max(...getProps());
 
 /**************************************************************************************************************/
 
-// Group by property (including nested properties)
-// Set the param about property (nested property) like that - 'prop1.prop2.prop3'
-// Below is the usage example
+/**
+ * Group by property (including nested properties)
+ * Set the param about property (nested property) like that - 'prop1.prop2.prop3'
+ * Below is the usage example
+ * @param array array
+ * @param string key
+ * @return object
+ */
 const groupBy = (array, key) => {
 
     const _fetchFromObject = (obj, prop) => {
@@ -49,3 +61,21 @@ const groupBy = (array, key) => {
 
 // Usage example (e.g. we want to group by 'uid' property, which id in the 'dataset' property)
 groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.uid');
+
+
+/**************************************************************************************************************/
+
+/**
+ * Lets suppose that we have an array of objects
+ * And we have to find in this array an object, which prop's value mathes to the transmitted value
+ * @param array array
+ * @param string prop
+ * @param string val
+ * @return object
+ */
+const findBy = (array, prop, val) => {
+    return array.find(obj => {
+        console.log('qwe ' + obj[prop] + ' qwe');
+        return obj[prop] === val;
+    });
+}
