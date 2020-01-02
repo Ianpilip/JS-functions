@@ -5,14 +5,14 @@ const array_unique = (array) => {
   });
 }
 
-/ *** /
+/**************************************************************************************************************/
 
 // Lets we have an array of objects and we need to get minimum or maximum value of the certain property within all objects
 const getProps = () => data.map(obj => obj.prop);
 const getMinProp = () => Math.min(...getProps());
 const getMaxprop = () => Math.max(...getProps());
 
-/ *** /
+/**************************************************************************************************************/
 
 // Group by property (including nested properties)
 // Set the param about property (nested property) like that - 'prop1.prop2.prop3'
