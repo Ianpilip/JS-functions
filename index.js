@@ -7,7 +7,8 @@ const array_unique = (array) => {
 
 /**************************************************************************************************************/
 
-// Lets we have an array of objects and we need to get minimum or maximum value of the certain property within all objects
+// Lets suppose that we have an array of objects
+// And we need to get minimum or maximum value of the certain property within all objects
 const getProps = () => data.map(obj => obj.prop);
 const getMinProp = () => Math.min(...getProps());
 const getMaxprop = () => Math.max(...getProps());
@@ -46,5 +47,5 @@ const groupBy = (array, key) => {
 
 };
 
-// Usage example (e.g. we want to group by 'uid' property, which in the 'dataset' property)
+// Usage example (e.g. we want to group by 'uid' property, which id in the 'dataset' property)
 groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.uid');
