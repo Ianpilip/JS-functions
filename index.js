@@ -14,11 +14,12 @@ const array_unique = (array) => {
 /**
  * Lets suppose that we have an array of objects
  * And we need to get minimum or maximum value of the certain property within all objects
+ * @param array array
  * @return mixed
  */
-const getProps = () => data.map(obj => obj.prop);
-const getMinProp = () => Math.min(...getProps());
-const getMaxprop = () => Math.max(...getProps());
+const getProps = (arr) => arr.map(obj => obj.prop);
+const getMinProp = (arr) => Math.min(...getProps(arr));
+const getMaxprop = (arr) => Math.max(...getProps(arr));
 
 /**************************************************************************************************************/
 
