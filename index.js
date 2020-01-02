@@ -17,9 +17,9 @@ const array_unique = (array) => {
  * @param array array
  * @return mixed
  */
-const getProps = (arr) => arr.map(obj => obj.prop);
-const getMinProp = (arr) => Math.min(...getProps(arr));
-const getMaxprop = (arr) => Math.max(...getProps(arr));
+const getProps = (array) => arr.map(obj => obj.prop);
+const getMinProp = (array) => Math.min(...getProps(array));
+const getMaxprop = (array) => Math.max(...getProps(array));
 
 /**************************************************************************************************************/
 
