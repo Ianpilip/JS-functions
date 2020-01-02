@@ -62,7 +62,6 @@ const groupBy = (array, key) => {
 // Usage example (e.g. we want to group by 'uid' property, which id in the 'dataset' property)
 groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.uid');
 
-
 /**************************************************************************************************************/
 
 /**
@@ -75,7 +74,6 @@ groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.ui
  */
 const findBy = (array, prop, val) => {
     return array.find(obj => {
-        console.log('qwe ' + obj[prop] + ' qwe');
         return obj[prop] === val;
     });
 }
