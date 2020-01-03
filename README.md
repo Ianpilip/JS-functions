@@ -1,3 +1,4 @@
 # JS-functions
 
-Just different functions, which can be very useful
+Just functions, which can be useful in different cases
+They were written because of frequent needs
