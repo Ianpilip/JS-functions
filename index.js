@@ -87,6 +87,6 @@ const findBy = (array, prop, value) => {
  * @param string value
  * @return array
  */
-const unsetFromArray = (array, value) {
+const unsetFromArray = (array, value) => {
    return array.filter(element => element !== value);
 }
