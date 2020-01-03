@@ -60,7 +60,7 @@ const groupBy = (array, key) => {
 
 };
 
-// Usage example (e.g. we want to group by 'uid' property, which id in the 'dataset' property)
+// Usage example (e.g. we want to group by 'uid' property, which is in the 'dataset' property)
 groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.uid');
 
 /**************************************************************************************************************/
