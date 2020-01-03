@@ -3,7 +3,7 @@
  * @param array array
  * @return array
  */
-const array_unique = (array) => {
+const arrayUnique = (array) => {
   return array.filter(function(currentItem, currentIndex) {
     return array.indexOf(currentItem) == currentIndex;
   });
