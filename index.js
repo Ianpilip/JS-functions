@@ -70,11 +70,23 @@ groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.ui
  * And we have to find in this array an object, which prop's value mathes to the transmitted value
  * @param array array
  * @param string prop
- * @param string val
+ * @param string value
  * @return object
  */
-const findBy = (array, prop, val) => {
+const findBy = (array, prop, value) => {
     return array.find(obj => {
-        return obj[prop] === val;
+        return obj[prop] === value;
     });
+}
+
+/**************************************************************************************************************/
+
+/**
+ * Removes an element from an array (strong typing comparison)
+ * @param array array
+ * @param string value
+ * @return array
+ */
+const unsetFromArray = (array, value) {
+   return array.filter(element => element !== value);
 }
