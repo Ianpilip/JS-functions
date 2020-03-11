@@ -61,7 +61,7 @@ const groupBy = (array, key) => {
 };
 
 // Usage example (e.g. we want to group by 'uid' property, which is in the 'dataset' property)
-groupBy([].slice.call(document.querySelectorAll('.class1 .class2')), 'dataset.uid');
+groupBy([].slice.call(document.querySelectorAll('selector')), 'dataset.uid');
 
 /**************************************************************************************************************/
 
@@ -89,4 +89,12 @@ const findBy = (array, prop, value) => {
  */
 const unsetFromArray = (array, value) => {
    return array.filter(element => element !== value);
+}
+
+/**
+ * Gives a random hash with combined string symbols and integers
+ * @return string
+ */
+function getRandHash() {
+  return Math.random().toString(16).substring(2);
 }
