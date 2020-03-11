@@ -91,6 +91,9 @@ const unsetFromArray = (array, value) => {
    return array.filter(element => element !== value);
 }
 
+
+/**************************************************************************************************************/
+
 /**
  * Gives a random hash with combined string symbols and integers
  * @return string
