@@ -66,7 +66,7 @@ groupBy([].slice.call(document.querySelectorAll('selector')), 'dataset.uid');
 /**************************************************************************************************************/
 
 /**
- * Works with multidimensional objects also and transforms deep properties
+ * Works with multidimensional objects also and transforms nested properties
  * @param {Object} object
  * @return {Object} res
 */
