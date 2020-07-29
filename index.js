@@ -66,6 +66,35 @@ groupBy([].slice.call(document.querySelectorAll('selector')), 'dataset.uid');
 /**************************************************************************************************************/
 
 /**
+ * Works with multidimensional objects also and transforms deep properties
+ * @param {Object} object
+ * @return {Object} res
+*/
+const objectPropertiesToLowerCase = (object) => {
+  return Object.keys(object).reduce((res, prop) => {
+    if(object[prop] && object[prop].constructor === Object) {
+      res[prop.toLowerCase()] = objectPropertiesToLowerCase(object[prop]);
+    } else {
+      res[prop.toLowerCase()] = object[prop];
+    }
+    return res;
+  }, {});
+}
+
+/**************************************************************************************************************/
+
+/**
+ * @param {Object} object
+ * @param {String} key
+ * @return {Boolean}
+*/
+const hasOwnPropertyCaseInsensitive = (object, key) => {
+  return Boolean(object[Object.keys(object).find(k => k.toLowerCase() === key.toLowerCase())]);
+}
+
+/**************************************************************************************************************/
+
+/**
  * Lets suppose that we have an array of objects
  * And we have to find in this array an object, which prop's value mathes to the transmitted value
  * @param array array
