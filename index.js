@@ -130,3 +130,32 @@ const unsetFromArray = (array, value) => {
 function getRandHash() {
   return Math.random().toString(16).substring(2);
 }
+
+/**************************************************************************************************************/
+
+/**
+ * Works with multidimensional objects also and transforms nested properties
+ * @param {Object} object
+ * @return {Object} res
+*/
+const objectPropertiesToLowerCase = (object) => {
+  return Object.keys(object).reduce((res, prop) => {
+    if(object[prop] && object[prop].constructor === Object) {
+      res[prop.toLowerCase()] = objectPropertiesToLowerCase(object[prop]);
+    } else {
+      res[prop.toLowerCase()] = object[prop];
+    }
+    return res;
+  }, {});
+}
+
+/**************************************************************************************************************/
+
+/**
+ * @param {Object} object
+ * @param {String} key
+ * @return {Boolean}
+*/
+const hasOwnPropertyCaseInsensitive = (object, key) => {
+  return Boolean(object[Object.keys(object).find(k => k.toLowerCase() === key.toLowerCase())]);
+}
