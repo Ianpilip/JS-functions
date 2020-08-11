@@ -130,3 +130,16 @@ const unsetFromArray = (array, value) => {
 function getRandHash() {
   return Math.random().toString(16).substring(2);
 }
+
+/**************************************************************************************************************/
+
+/*
+ * Shows a value's type without unexpected results, such as `typeof null; // "object"`
+ * @param {Mixed} value
+ * @return {String}
+ */
+const getType = (value) => {
+  let regex = /^\[object (\S+?)\]$/;
+  let matches = Object.prototype.toString.call(value).match(regex) || [];
+  return (matches[1] || 'undefined').toLowerCase();
+}
